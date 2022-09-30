@@ -15,12 +15,19 @@ jobs:
       - id: env-pipeline
         name: show-pipeline-environemnt
         run: ls
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm install
+      - run: npm run lint
+      - run: npm test
 
-steps:
-- uses: actions/checkout@v3
-- uses: actions/setup-node@v3
-  with:
-    node-version: 16
-- run: npm install
-- run: npm run lint
-- run: npm test
+# steps:
+# - uses: actions/checkout@v3
+# - uses: actions/setup-node@v3
+#   with:
+#     node-version: 16
+# - run: npm install
+# - run: npm run lint
+# - run: npm test
