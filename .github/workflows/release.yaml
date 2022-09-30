@@ -28,7 +28,7 @@ jobs:
     steps:
       - run: docker login -u sanjay67890 -p "$DOCKER_SECRET"
         env:
-          DOCKER_SECRET: ${{ DOCKER_HUB_TOKEN }}
+          DOCKER_SECRET: ${{ secrets.DOCKER_HUB_TOKEN }}
       - run: docker push sanjay67890/first:0.0.3
         
 
