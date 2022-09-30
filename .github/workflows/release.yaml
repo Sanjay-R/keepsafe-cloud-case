@@ -26,9 +26,9 @@ jobs:
     name: DockerPush
     runs-on: ubuntu-latest
     steps:
-    - uses: docker-practice/actions-setup-docker@master
-    - run: docker login -u sanjay67890 -p ${{ secrets.DOCKER_HUB_TOKEN }}
-    - run: docker push sanjay67890/first:0.0.3
+      - uses: docker-practice/actions-setup-docker@master
+      - run: docker login -u sanjay67890 -p ${{ secrets.DOCKER_HUB_TOKEN }}
+      - run: docker push sanjay67890/first:0.0.3
         
 
 # https://github.com/marketplace/actions/setup-docker
