@@ -37,7 +37,3 @@ app.get('/totalRent', (req, res) => {
 app.listen(PORT, () => {
   console.debug('Node Js Server is Running');
 });
-
-// comment
-// COMMENT 2
-// antoher one
