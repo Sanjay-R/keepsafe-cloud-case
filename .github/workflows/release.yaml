@@ -26,7 +26,7 @@ jobs:
     name: DockerPush
     runs-on: ubuntu-latest
     steps:
-      - run: docker login -u sanjay67890 -p $DOCKER_SECRET
+      - run: docker login -u sanjay67890 -p "$DOCKER_SECRET"
         env:
           DOCKER_SECRET: ${{ secrets.DOCKER_HUB_TOKEN }}
       - run: docker push sanjay67890/first:0.0.3
